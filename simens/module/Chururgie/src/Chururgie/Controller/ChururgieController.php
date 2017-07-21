@@ -517,7 +517,7 @@ class ChururgieController extends AbstractActionController {
 	
 	public function listeAdmissionAjaxAction() {
 		$patient = $this->getPatientTable ();	
-		$output = $patient->laListePatientsAjax ();
+		$output = $patient->laListePatientsAjax();
 		return $this->getResponse ()->setContent ( Json::encode ( $output, array (
 				'enableJsonExprFinder' => true 
 		) ) );
@@ -1215,7 +1215,7 @@ class ChururgieController extends AbstractActionController {
 	
 				
 			$date = $unPatient['DATE_NAISSANCE'];
-			if($date){ $date = $this->convertDate ( $unPatient['DATE_NAISSANCE'] ); }else{ $date = null;}
+			if($date){ $date = $this->convertDate ( $unPatient['DATE_NAISSANCE'] ); }else{ $date = null;} 
 	
 		 $html  = "<div style='width:100%;'>";
 				
