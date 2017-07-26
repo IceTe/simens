@@ -4,8 +4,8 @@ namespace Chururgie\View\Helper;
 use ZendPdf;
 use ZendPdf\Page;
 use ZendPdf\Font;
-use Consultation\Model\Consultation;
-use Facturation\View\Helper\DateHelper; 
+use Chururgie\Model\Consultation;
+use Chururgie\View\Helper\DateHelper; 
 
 
 class OrdonnancePdf
@@ -41,7 +41,7 @@ class OrdonnancePdf
  		$this->_pageHeight = $this->_page->getHeight();
  		$this->_pageWidth = $this->_page->getWidth();
  		/**
- 		 * Pas encore utilisé
+ 		 * Pas encore utilisï¿½
  		 */
  		$this->_normalFont = Font::fontWithName( ZendPdf\Font::FONT_HELVETICA);
  		$this->_boldFont = Font::fontWithName( ZendPdf\Font::FONT_HELVETICA_BOLD);
@@ -77,11 +77,11 @@ class OrdonnancePdf
 				787); //+y
 		
 		$this->_page->setFont($this->_newTime, 10);
-		$this->_page->drawText('République du Sénégal',
+		$this->_page->drawText('Rï¿½publique du Sï¿½nï¿½gal',
 				$this->_leftMargin,
 				$this->_pageHeight - 50);
 		$this->_page->setFont($this->_newTime, 10);
-		$this->_page->drawText('Ministère de la santé et de l\'action sociale',
+		$this->_page->drawText('Ministï¿½re de la santï¿½ et de l\'action sociale',
 				$this->_leftMargin,
 				$this->_pageHeight - 65);
 		$this->_page->setFont($this->_newTime, 10);
@@ -309,12 +309,12 @@ class OrdonnancePdf
 				120);
 		
 		$this->_page->setFont($this->_newTime, 10);
-		$this->_page->drawText('Téléphone: 33 726 25 36   BP: 24000',
+		$this->_page->drawText('Tï¿½lï¿½phone: 33 726 25 36   BP: 24000',
 				$this->_leftMargin,
 				$this->_pageWidth - ( 100 + 390));
 		
 		$this->_page->setFont($this->_newTime, 10);
-		$this->_page->drawText('Consultation numéro: ',
+		$this->_page->drawText('Consultation numï¿½ro: ',
 				$this->_leftMargin + 310,
 				$this->_pageWidth - ( 100 + 390));
 		$this->_page->setFont($this->_newTimeGras, 11);

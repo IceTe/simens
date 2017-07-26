@@ -32,7 +32,7 @@ $(function(){
 
 //POUR LE MENU GAUCHE dans -elementgauche.phtml
 $('#plus_deces').toggle(true);
-$("#deces").replaceWith("<li id='deces' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src='<?php echo $this->basePath().'/images_icons/moin-green2.PNG';?>' alt='Liste' /> Consultation Generale </span></a></li>");
+$("#deces").replaceWith("<li id='deces' style='background:#4a5765;'><a href=''><span style='margin-left:0px; color: #ffffff; font-weight:bold; font-size:20px; font-family:Times New Roman;'> <img style='display: inline;' src='<?php echo $this->basePath().'/images_icons/moin-green2.PNG';?>' alt='Liste' /> Consultation Externe </span></a></li>");
 dep_deces1();
 $('#declarer_style').css({'font-weight':'bold','color':'white','font-size':'22px'});
 </script>
@@ -749,9 +749,9 @@ echo $this->form ()->openTag ( $form );
 
 		</div>
 
-		<!-- ********************Antécédents ou Terrain particulier ******************-->
-		<!-- ********************Antécédents ou Terrain particulier ******************-->
-		<!-- ********************Antécédents ou Terrain particulier ******************-->
+		<!-- ********************Antï¿½cï¿½dents ou Terrain particulier ******************-->
+		<!-- ********************Antï¿½cï¿½dents ou Terrain particulier ******************-->
+		<!-- ********************Antï¿½cï¿½dents ou Terrain particulier ******************-->
 
 		<div style='font-family: police2; font-size: 17px; font-weight: bold;'>Historiques
 			ou terrain particulier</div>
@@ -1001,7 +1001,7 @@ echo $this->form ()->openTag ( $form );
 						</tr>
 
 						<tr id="labelDesAntecedentsMedicaux_1" style="width: 100%;">
-							<!-- Emplacement des autres antecedents médicaux ajouter à partir du champ autre -->
+							<!-- Emplacement des autres antecedents mï¿½dicaux ajouter ï¿½ partir du champ autre -->
 						</tr>
 
 
@@ -1645,7 +1645,7 @@ echo $this->form ()->openTag ( $form );
                                
                                partDefautActe(myArrayActe, 1);
                                
-                               //Descactiver la visualisation des resultats pour afficher uniquement ceux selectionnés
+                               //Descactiver la visualisation des resultats pour afficher uniquement ceux selectionnï¿½s
                                setTimeout(function(){ desactiverResutatsActe (); }, 500);
                             </script>
 
@@ -1754,7 +1754,7 @@ echo $this->form ()->openTag ( $form );
                             
                             <script> 
                                partDefautExamenBio(myArrayExamenBio, 1);
-                               //Descactiver la visualisation des resultats pour afficher uniquement ceux selectionnés
+                               //Descactiver la visualisation des resultats pour afficher uniquement ceux selectionnï¿½s
                                desactiverResutatsBio ();
                             </script>
 
@@ -2855,6 +2855,118 @@ echo $this->form ()->openTag ( $form );
 
 				</div>
 
+   							 <!-- Les pathologies -->
+   							   <!-- Les pathologies -->
+   							     <!-- Les pathologies -->
+   							       <!-- Les pathologies -->
+   							         <!-- Les pathologies -->
+   							           <!-- Les pathologies -->
+
+<div
+					style='font-family: police2; font-size: 17px; font-weight: bold;'>
+					Les Pathologies</div>
+				<div>
+
+					<!--******* ======= MENU MENU MENU =======  ******-->
+					<!--******* ======= MENU MENU MENU =======  ******-->
+					<div
+						style="padding-bottom: 0px; margin-bottom: 5px; border-bottom: 2px solid green; margin-left: 0px;"></div>
+					<!-- LE PDF POUR IMPRESSION-->
+					<div class="ordonnance">
+						<hass> <input type="submit" alt="Constantes" title="Imprimer"
+							name="ordonnance" id="ordonnance"></hass>
+					</div>
+
+					<!-- LE CHAMP POUR LA DUREE DU TRAITEMENT DE L'ORDONNANCE-->
+				
+
+					<div
+						style="padding-bottom: 40px; margin-bottom: 10px; border-bottom: 1px dashed green; margin-left: 0px; margin-right: 0px;"></div>
+
+					<!--******* ======= MEDICAMENTS MEDICAMENTS =======  ******-->
+					<!--******* ======= MEDICAMENTS MEDICAMENTS =======  ******-->
+                    
+                  
+                  <?php
+					/**
+					 * =============================================================================================
+					 * =============================================================================================
+					 * =============================================================================================
+													*/
+						echo $this->headScript ()->appendFile ( $this->basePath () . '/js/chururgie/lespathologies.js' );
+																		?>    
+                                   
+                 <div id="listeMedicaments"
+						style="float: left; width: 100%;">
+
+						<table class="table table-bordered" style="width: 100%; margin-bottom: 0px; margin-left: 0px;">
+							<thead style="width: 100%;">
+								<tr style="width: 100%; height: 40px; font-family: police2;">
+									
+									<th
+										style="width: 20%; font-weight: bold; font-size: 15px; text-align: left;"> Organes</th>
+									<th
+										style="width: 29%; font-weight: bold; font-size: 15px; text-align: left;">Classe de Pathologies</th>
+									<th
+										style="width: 29%; font-weight: bold; font-size: 15px; text-align: left;">Types de Pathologies</th>
+										<th
+										style="width: 29%; font-weight: bold; font-size: 15px; text-align: left;">Commentaire</th>	
+									<th style="width: 9%; font-weight: bold; font-size: 15px;">Options</th>
+								</tr>
+							</thead>
+						</table>
+
+						<div id="" style="width: 100%;">
+							<!-- A ne pas enlever -->
+						</div>
+
+
+						<!--********************* BOUTON AJOUTER-SUPPRIMER ************************-->
+						<!--********************* BOUTON AJOUTER-SUPPRIMER ************************-->
+						<div id="controls_medicament"
+							style="margin-top: 20px; width: 100%;">
+							<div style="width: 100%;">
+								<div style="width: 3%; float: left; cursor: pointer;"
+									id="supprimer_medicament">
+									<img style='margin-left: 5px;'
+										src='../images_icons/moin-green.png' title='supprimer' />
+								</div>
+								<div style="width: 3%; float: left; cursor: pointer;"
+									id="ajouter_medicament">
+									<img style='margin-left: 5px;'
+										src='../images_icons/plus-green.png' title='ajouter' />
+								</div>
+							</div>
+						</div>
+
+						<!--********************* BOUTON VALIDER OU MODIFIER ************************-->
+						<!--********************* BOUTON VALIDER OU MODIFIER ************************-->
+						<table
+							style="width: 90%; float: right; position: relative; right: 0;">
+							<tr style="width: 100%;">
+								<th style="height: 15px;">
+									<div id='bouton_Medicament_modifier_demande'
+										style="float: right;">
+										<button>Modifier</button>
+									</div>
+									<div id='bouton_Medicament_valider_demande'
+										style="float: right;">
+										<button>Valider</button>
+									</div>
+								</th>
+							</tr>
+						</table>
+
+					</div>
+
+
+					<!--********************* CHARGEMENT DES DONNEES  ************************-->
+					<!--********************* CHARGEMENT DES DONNEES  ************************-->
+					<!--********************* CHARGEMENT DES DONNEES  ************************-->
+					
+				</div>
+
+
 
 			</div>
 
@@ -3004,6 +3116,7 @@ echo $this->form ()->openTag ( $form );
 
 							<th class="form-rendezvous2" style="width: 27%;"> <?php echo $this->formRow($form->get('date_rv')); ?> </th>
 							<th class="form-rendezvous2" style="width: 17%;"> <?php echo $this->formRow($form->get('heure_rv'));?> </th>
+							<th class="form-rendezvous2" style="width: 17%;"> <?php echo $this->formRow($form->get('delai_rv'));?> </th>
 							<th style="width: 10%;">
 							
 							<th>

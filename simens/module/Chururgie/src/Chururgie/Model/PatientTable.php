@@ -99,7 +99,9 @@ class PatientTable {
 	                if ($aColumns[$i] == 'Nom'){
 	                    $row[] = "<khass id='nomMaj'>".$aRow[ $aColumns[$i]]."</khass>";
 	                }
-	                
+	                else if ($aColumns[$i] == 'Numero_dossier'){
+	                    $row[] = "<span style='font-size: 19px;'>".$aRow[ $aColumns[$i]]."<span style='display: none;'> ".str_replace(' ', '' ,$aRow[ $aColumns[$i]])."</span></span>";
+	                }
 	              else if ($aColumns[$i] == 'Datenaissance') {
 	                    $date_naissance = $aRow[ $aColumns[$i] ];
 	                    if($date_naissance){ $row[] = $Control->convertDate($aRow[ $aColumns[$i] ]); }else{ $row[] = null;}
@@ -113,7 +115,7 @@ class PatientTable {
 	                    $html ="<infoBulleVue> <a href='javascript:visualiser(".$aRow[ $aColumns[$i] ].")' >";
 	                    $html .="<img style='margin-left: 5%; margin-right: 15%;' src='".$tabURI[0]."public/images_icons/voir2.png' title='d&eacute;tails'></a> </infoBulleVue>";
 	                    
-	                    $html .= "<infoBulleVue> <a href='javascript:admettre(".$aRow[ 'id' ].")' >";
+	                    $html .= "<infoBulleVue> <a href='javascript:declarer(".$aRow[ 'id' ].")' >";
 	                    $html .="<img style='display: inline; margin-right: 5%;' src='".$tabURI[0]."public/images_icons/transfert_droite.png' title='suivant'></a> </infoBulleVue>";
 	                    $row[] = $html;
 	                }
@@ -129,7 +131,7 @@ class PatientTable {
 	
 	
 	
-	public function addPatient($donnees , $date_enregistrement , $id_employe){
+	public function addPatient($donnees , $date_enregistrement , $id_employe, $sexe ){
 	    $date = new \DateTime();
 	    $mois = $date ->format('m');
 	    $annee = $date ->format('Y');

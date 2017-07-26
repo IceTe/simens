@@ -93,6 +93,18 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface, Se
 	public function getServiceConfig() {
 		return array (
 				'factories' => array (
+				    
+				    'Chururgie\Model\ClassePathologieTable' => function ($sm) {
+				    $tableGateway = $sm->get('ClassePathologieFactGateway');
+				    $table = new ServiceTable($tableGateway);
+				    return $table;
+				    },
+				    'ServiceTableFactGateway' => function($sm) {
+				    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+				    $resultSetPrototype = new ResultSet();
+				    $resultSetPrototype->setArrayObjectPrototype(new Service());
+				    return new TableGateway('ClassePathologie', $dbAdapter, null, $resultSetPrototype);
+				    },
 						'Chururgie\Model\PatientTable' => function ($sm) {
 							$tableGateway = $sm->get ( 'PatientTable1Gateway' );
 							$table = new PatientTable ( $tableGateway );

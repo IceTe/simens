@@ -1,5 +1,9 @@
 @CHARSET "ISO-8859-1";
 /* EN TETE*/
+#_numero_dossier
+{
+	width: 13%;
+}
 #_nom
 {
 	width: 13%;
@@ -10,7 +14,7 @@
 	width: 15%;
 }
 
-#_date
+#_age
 {
 	width: 12%;
 }
@@ -36,6 +40,15 @@
 }
 
 /* PIED DE PAGE*/
+#numero_dossier_ input[type="text"]
+{ /*le input ou le textarea*/
+
+background-color: #fffffa; /*la couleur du champ*/
+
+height: 25px; /*la hauteur du champ input*/
+
+width: 100%; /* la largeur du champ input*/
+}
 #nom_ input[type="text"]
 { /*le input ou le textarea*/
 
@@ -56,7 +69,7 @@ height: 25px; /*la hauteur du champ input*/
 width: 100%; /* la largeur du champ input*/
 }
 
-#date_ input[type="text"]
+#age_ input[type="text"]
 { /*le input ou le textarea*/
 
 background-color: #fffffa; /*la couleur du champ*/

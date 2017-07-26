@@ -196,6 +196,8 @@ return array(
     								'complement-consultation'=> array('medecin'),
     								'impression-Pdf'=> array('medecin'),
     								'update-complement-consultation'=> array('medecin'),
+    						         'visualisation-consultation'=> array('medecin'),
+    						          'espace-recherche-med'=>'medecin',
     						),
     						
     						/***
